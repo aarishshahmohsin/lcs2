@@ -1,0 +1,51 @@
+# --- Python -----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# --- virtual environments and local settings --------------------------------
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# --- secrets: never commit tokens (HF_TOKEN / GITHUB_TOKEN go in Kaggle Secrets) --
+*.token
+hf_token*
+secrets*.json
+
+# --- notebooks, editors, OS -------------------------------------------------
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# --- model / dataset caches (downloaded again from Hugging Face) ------------
+.cache/
+hf_cache/
+*.safetensors
+*.bin
+
+# --- archives (results.zip from Kaggle, the submission code zip) ------------
+*.zip
+
+# --- results: KEEP results/ in the repo (the brief requires the saved outputs);
+#     only ignore leftovers that no current script produces -------------------
+results/raw/*/xinterp/
+results/processed/probe_cache/
+results/tables/XI_*
+results/figures/XI_*
+
+# --- LaTeX build files (if the paper is built inside the repo) --------------
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
