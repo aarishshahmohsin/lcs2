@@ -21,11 +21,11 @@ docstring first; it explains what that step adds and what to check before moving
 
 ## Running on Kaggle (fresh notebook)
 
-Use `kaggle_notebook.ipynb` at the repository root:
+Use `lcs2-assignment.ipynb` at the repository root:
 
 1. Push this repository to GitHub. On Hugging Face, accept the licence of
    `meta-llama/Llama-3.2-3B-Instruct` and create a read token.
-2. On Kaggle: **Code → New Notebook → File → Import Notebook →** `kaggle_notebook.ipynb`. [Online link](https://www.kaggle.com/code/aarishshahmohsin/lcs2-assignment)
+2. On Kaggle: **Code → New Notebook → File → Import Notebook →** `lcs2-assignment.ipynb`. [Online link](https://www.kaggle.com/code/aarishshahmohsin/lcs2-assignment)
 3. Notebook settings: **Accelerator: GPU T4 x2** (one GPU is used; recent PyTorch may not support the
    P100), **Internet: On**, **Add-ons → Secrets:** `HF_TOKEN` (plus `GITHUB_TOKEN` if the repository is
    private), switched on for this notebook.
