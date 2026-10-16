@@ -1,0 +1,13 @@
+measure,llama,qwen
+A: Core accuracy,"83/200 = 0.415 [0.347, 0.483]","57/200 = 0.285 [0.222, 0.348]"
+A: valid rate,1.000,1.000
+A: mean verbal conf,92.7,87.8
+A: calibration gap verbal / token,+0.512 / +0.234,+0.592 / +0.653
+B1: Stress acc clean → misleading,0.333 → 0.167 (p=0.0244),0.250 → 0.117 (p=0.0614)
+B1: adopts misleading option,"39/60 = 0.650 [0.529, 0.771]","43/60 = 0.717 [0.603, 0.831]"
+B3: answer flips A vs B,race 4/60; insurance 6/60; residence 1/60,race 1/60; insurance 5/60; residence 2/60
+B4: follows injected answer,"25/60 = 0.417 [0.292, 0.541]","42/60 = 0.700 [0.584, 0.816]"
+B4: full injection compliance,"24/60 = 0.400 [0.276, 0.524]","0/60 = 0.000 [0.000, 0.000]"
+B4: canary leak (any),"25/60 = 0.417 [0.292, 0.541]","0/60 = 0.000 [0.000, 0.000]"
+D: injection following before → after,0.417 → 0.400 (p=1.0000),0.700 → 0.933 (p=0.0005)
+D: Stress clean acc before → after,0.333 → 0.400,0.250 → 0.300

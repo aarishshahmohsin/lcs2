@@ -1,0 +1,11 @@
+model,method,n_items,drop_top,drop_random,drop_bottom,top_minus_random,paired_t_p_top_vs_random,frac_items_top_gt_random,flip_top,flip_random,flip_bottom
+llama,occlusion,40,"1.047 [0.745, 1.349]","0.133 [0.064, 0.201]","-0.253 [-0.344, -0.161]","0.914 [0.626, 1.203]",0.0000,1.000,0.675,0.205,0.000
+llama,gradxinput,40,"0.173 [0.034, 0.312]","0.133 [0.064, 0.201]","0.302 [0.043, 0.561]","0.040 [-0.120, 0.201]",0.6234,0.475,0.275,0.205,0.275
+llama,occlusion vs grad×input,40,mean Pearson r = 0.030,,,,,,,,
+llama,evidence-cited sentence = top occlusion sentence,40,0.225 (chance 0.096); mean percentile rank of cited sentence 0.551 (chance 0.5),,,,,,,,
+llama,logit lens,40,answer stably emerges at layer 22 (median) of 28,,,,,,,,
+qwen,occlusion,40,"4.966 [2.904, 7.028]","0.755 [0.282, 1.228]","0.099 [-0.205, 0.402]","4.211 [2.362, 6.060]",0.0001,0.825,0.675,0.155,0.025
+qwen,gradxinput,40,"2.589 [0.931, 4.248]","0.754 [0.282, 1.227]","0.399 [0.002, 0.796]","1.835 [0.320, 3.350]",0.0226,0.425,0.300,0.155,0.125
+qwen,occlusion vs grad×input,38,mean Pearson r = 0.225,,,,,,,,
+qwen,evidence-cited sentence = top occlusion sentence,40,0.225 (chance 0.096); mean percentile rank of cited sentence 0.582 (chance 0.5),,,,,,,,
+qwen,logit lens,40,answer stably emerges at layer 30 (median) of 36,,,,,,,,

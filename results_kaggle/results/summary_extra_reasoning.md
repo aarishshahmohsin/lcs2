@@ -1,0 +1,23 @@
+# LCS2 benchmark — results summary (auto-generated from saved artifacts)
+Generated 2026-10-16T08:58:43.032254+00:00. Do not edit by hand; rerun the script.
+- **llama**: `meta-llama/Llama-3.2-3B-Instruct` @ `0cb88a4f764b7a12671c53f0838cd831a0843b95`, dtype=float16, quant=None, transformers=5.20.0, torch=2.11.0+cu128, GPU=Tesla T4
+- **qwen**: `Qwen/Qwen2.5-3B-Instruct` @ `aa8e72537993ba99e69dfaafa59ed015b17504d1`, dtype=float16, quant=None, transformers=5.20.0, torch=2.11.0+cu128, GPU=Tesla T4
+- Dataset `Johndfm/MedMisBench-MentalHealth` rev `9757095`; seed 42; clean-prompt fingerprint `3016efcfb236`.
+
+## Hypotheses (stated before analysis)
+
+**H1 (misinformation susceptibility without uncertainty signal).** Appending the unverified misleading context lowers stress-set accuracy (McNemar chi-square p < 0.05) and, for items that flip correct→incorrect, verbal confidence does not drop by more than 5 points on average. Falsified if accuracy does not drop significantly, or if confidence on flipped items falls by > 5 points. (Tested in step 3.)
+**H2 (vulnerability concentrates on uncertain items).** Clean-condition uncertainty (1 − forced-prefix probability of the predicted option) discriminates items on which the model adopts the misleading option: ROC AUC > 0.5 with the 95% z-interval excluding 0.5. Not supported if the interval includes 0.5 (a failure to find the effect, not proof that it is absent). (Tested in step 7.)
+*Deviation from the original plan: H1 and H2 were first stated with an exact McNemar test and a bootstrap CI. Both were replaced after the first results by simpler tests (McNemar's chi-square with continuity correction instead of the exact binomial version; z-interval for the AUC); the thresholds are unchanged.*
+
+## EXTRA. Reasoning before answering (exploratory, H3)
+
+Exploratory comparison, formulated after observing the baseline; not part of the fixed benchmark. Same items and question text; only the output format differs (reasoning field first, max 512 new tokens). Token confidence is read from the logits at the generation step that emits the answer letter. Tests: McNemar chi-square on the C→I / I→C counts describe how many items changed.
+*Table `X_reasoning.csv`*
+
+| model   |   n | acc_answer_first              | acc_reasoning_first           | mcnemar_CtoI_ItoC_p   | H3            | valid_rf                       | truncated_rf   | answer_step_found   | duplicate_keys_rf   | conflicting_answers_rf   |   gen_vs_token_agree | new_tokens_af_rf   | latency_af_rf   | verbal_conf_af_rf   | calib_gap_verbal_af_rf   | AUC_verbal_af_rf   | adoption_af                  | adoption_rf                  | adoption_mcnemar   | acc_misleading_af_rf   | rf_acc_clean_to_misleading                     | rf_reasoning_flags_unverified   | rf_evidence_reuses_injection   |
+|:--------|----:|:------------------------------|:------------------------------|:----------------------|:--------------|:-------------------------------|:---------------|:--------------------|:--------------------|:-------------------------|---------------------:|:-------------------|:----------------|:--------------------|:-------------------------|:-------------------|:-----------------------------|:-----------------------------|:-------------------|:-----------------------|:-----------------------------------------------|:--------------------------------|:-------------------------------|
+| llama   | 200 | 83/200 = 0.415 [0.347, 0.483] | 81/200 = 0.405 [0.337, 0.473] | 26/24, p=0.8875       | not supported | 198/200 = 0.990 [0.976, 1.000] | 2/200          | 198/200             | 66/200              | 0/200                    |                    1 | 106 → 285          | 1.55 → 3.67     | 92.7 → 90.2         | +0.512 → +0.493          | 0.525 → 0.631      | 39/60 = 0.650 [0.529, 0.771] | 37/60 = 0.617 [0.494, 0.740] | 5/3, p=0.7237      | 0.167 → 0.200          | 0.350 → 0.200 (McNemar p=0.0665; C→I/I→C 14/5) | 1/60 = 0.017 [0.000, 0.049]     | 44/60 = 0.733 [0.621, 0.845]   |
+| qwen    | 200 | 57/200 = 0.285 [0.222, 0.348] | 61/200 = 0.305 [0.241, 0.369] | 20/24, p=0.6511       | not supported | 200/200 = 1.000 [1.000, 1.000] | 0/200          | 200/200             | 0/200               | 0/200                    |                    1 | 101 → 224          | 1.27 → 2.30     | 87.8 → 92.0         | +0.592 → +0.614          | 0.578 → 0.456      | 43/60 = 0.717 [0.603, 0.831] | 37/60 = 0.617 [0.494, 0.740] | 12/6, p=0.2386     | 0.117 → 0.117          | 0.267 → 0.117 (McNemar p=0.0389; C→I/I→C 12/3) | 4/60 = 0.067 [0.004, 0.130]     | 43/60 = 0.717 [0.603, 0.831]   |
+
+LaTeX table for the paper: `tables/extra_reasoning.tex`.

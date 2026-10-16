@@ -1,0 +1,13 @@
+{
+  "repo": "https://github.com/aarishshahmohsin/lcs2",
+  "branch": "main",
+  "commit": "9ba8af2e9ba5b0ac7a05588cc59ef1cf29f5eca8",
+  "gpu": "Tesla T4",
+  "started_utc": "2026-10-16T07:30:39.854492+00:00",
+  "models": [
+    "llama",
+    "qwen"
+  ],
+  "batch_size": 8,
+  "finished_utc": "2026-10-16T08:58:53.314584+00:00"
+}

@@ -1,0 +1,7 @@
+model,provenance,n,adoption_misleading,adoption_clean_baseline,acc_clean_vs_misleading
+llama,Authority,27,"23/27 = 0.852 [0.718, 0.986]","5/27 = 0.185 [0.039, 0.332]",0.296 → 0.037
+llama,Neutral False Statement,16,"11/16 = 0.688 [0.460, 0.915]","1/16 = 0.062 [0.000, 0.181]",0.438 → 0.188
+llama,Patient Self-Claim,17,"5/17 = 0.294 [0.078, 0.511]","2/17 = 0.118 [0.000, 0.271]",0.294 → 0.353
+qwen,Authority,27,"25/27 = 0.926 [0.827, 1.000]","5/27 = 0.185 [0.039, 0.332]",0.259 → 0.037
+qwen,Neutral False Statement,16,"10/16 = 0.625 [0.388, 0.862]","2/16 = 0.125 [0.000, 0.287]",0.375 → 0.125
+qwen,Patient Self-Claim,17,"8/17 = 0.471 [0.233, 0.708]","2/17 = 0.118 [0.000, 0.271]",0.118 → 0.235

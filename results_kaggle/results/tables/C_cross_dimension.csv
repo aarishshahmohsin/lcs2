@@ -1,0 +1,15 @@
+model,analysis,n,positives,statistic,p,H2
+llama,C1 clean uncertainty → misleading adoption,60,39,"AUC 0.581 [0.432, 0.731]",0.2870,not supported
+llama,C1b sensitivity: newly adopted (clean answer ≠ k),52,32,"AUC 0.572 [0.413, 0.731]",0.3757,-
+llama,C3 verbal conf: C→I vs stayed-correct (misleading),20,13,mean 97.3 vs 92.9,0.0255,-
+llama,"C3b control: same groups, CLEAN verbal conf",20,13,mean 92.7 vs 90.7,0.4923,-
+llama,C2 clean uncertainty → injection answer-following,60,25,"AUC 0.646 [0.502, 0.790]",0.0472,-
+llama,C2b sensitivity: newly followed (clean answer ≠ k),52,17,"AUC 0.674 [0.511, 0.836]",0.0359,-
+llama,C4 chooses k: misleading passage vs injection (McNemar),60,39 vs 25,"both 20, misleading only 19, injection only 5, neither 16",0.0080,-
+qwen,C1 clean uncertainty → misleading adoption,60,43,"AUC 0.532 [0.371, 0.694]",0.6965,not supported
+qwen,C1b sensitivity: newly adopted (clean answer ≠ k),51,35,"AUC 0.504 [0.331, 0.676]",0.9676,-
+qwen,C3 verbal conf: C→I vs stayed-correct (misleading),15,11,mean 93.2 vs 88.8,0.0959,-
+qwen,"C3b control: same groups, CLEAN verbal conf",15,11,mean 88.6 vs 86.2,0.5307,-
+qwen,C2 clean uncertainty → injection answer-following,60,42,"AUC 0.639 [0.492, 0.786]",0.0646,-
+qwen,C2b sensitivity: newly followed (clean answer ≠ k),51,33,"AUC 0.582 [0.421, 0.744]",0.3182,-
+qwen,C4 chooses k: misleading passage vs injection (McNemar),60,43 vs 42,"both 35, misleading only 8, injection only 7, neither 10",1.0000,-

@@ -1,0 +1,7 @@
+hypothesis,model,verdict,evidence,source
+H1 (pre-registered),llama,supported,"McNemar 13/3, p=0.0244; Δconf on C→I 4.6 [2.3, 7.0]",B1_hallucination.csv
+H1 (pre-registered),qwen,not supported,"McNemar 11/3, p=0.0614; Δconf on C→I 4.5 [0.7, 8.4]",B1_hallucination.csv
+H2 (pre-registered),llama,not supported,"AUC 0.581 [0.432, 0.731], p=0.287",C_cross_dimension.csv
+H2 (pre-registered),qwen,not supported,"AUC 0.532 [0.371, 0.694], p=0.6965",C_cross_dimension.csv
+"H3 (exploratory, post hoc)",llama,not supported,"Core acc 83/200 = 0.415 [0.347, 0.483] → 81/200 = 0.405 [0.337, 0.473]; McNemar 26/24, p=0.8875",X_reasoning.csv
+"H3 (exploratory, post hoc)",qwen,not supported,"Core acc 57/200 = 0.285 [0.222, 0.348] → 61/200 = 0.305 [0.241, 0.369]; McNemar 20/24, p=0.6511",X_reasoning.csv

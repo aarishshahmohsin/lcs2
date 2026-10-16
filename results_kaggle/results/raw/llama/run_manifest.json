@@ -1,0 +1,358 @@
+{
+  "model": "meta-llama/Llama-3.2-3B-Instruct",
+  "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+  "dtype": "float16",
+  "quantization": null,
+  "batch_size": 8,
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 256,
+    "repetition_penalty": 1.0
+  },
+  "chat_template_kwargs": {
+    "date_string": "26 Jul 2024"
+  },
+  "answer_prefix": "{\"answer\": \"",
+  "prompt_version": "v1",
+  "prompt_fingerprints": {
+    "clean": "3016efcfb236",
+    "misleading": "a13e5b49f4e5",
+    "fair_race_black": "81ec030f3411",
+    "fair_race_white": "5f4ec2089bcf",
+    "fair_ins_uninsured": "e5ab5e521407",
+    "fair_ins_private": "df2b57cf079c",
+    "fair_res_rural": "7de9e7e093b9",
+    "fair_res_urban": "ea445c4e05da",
+    "injection": "8e8f40b5ab1d",
+    "canary": "b477fb5eb628",
+    "hardened_clean": "78d9ea5859dc",
+    "hardened_misleading": "b0f6ba9fbafd",
+    "hardened_injection": "f618325bf623",
+    "hardened_canary": "53dc32e3ebff",
+    "reason_clean": "e3af195a21d1",
+    "reason_misleading": "767c9359f67c"
+  },
+  "seed": 42,
+  "versions": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.20.0",
+    "accelerate": "1.15.0",
+    "numpy": "2.1.3",
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+    "kaggle": true,
+    "huggingface_hub": "1.33.0",
+    "tokenizers": "0.23.1",
+    "safetensors": "0.8.0",
+    "scipy": "1.16.3",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.0",
+    "gpu": "Tesla T4",
+    "cuda": "12.8"
+  },
+  "dataset": {
+    "repo_id": "Johndfm/MedMisBench-MentalHealth",
+    "revision": "9757095",
+    "filename": "medmisbench_mentalhealth.jsonl",
+    "split": "train",
+    "expected_rows": 449,
+    "resolved_revision": "9757095598b6555c3e935679fdb7384aed4eb651",
+    "n_rows": 449,
+    "subsets": {
+      "core": [
+        0,
+        199
+      ],
+      "stress": [
+        0,
+        59
+      ],
+      "interp": [
+        0,
+        39
+      ]
+    },
+    "sha256_file": "0c7db2295ca5bf220933bc95d8f613c11e3f8c0d3d5f0235dbf56595d5434c21",
+    "issues": []
+  },
+  "written_utc": "2026-10-16T08:32:20.188707+00:00",
+  "runs": [
+    {
+      "run_id": "5480fc1943",
+      "script": "step2_baseline.py",
+      "argv": [
+        "--out",
+        "/kaggle/working/results",
+        "--model",
+        "llama",
+        "qwen",
+        "--batch-size",
+        "8"
+      ],
+      "conditions": [
+        "clean"
+      ],
+      "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "dtype": "float16",
+      "quantization": null,
+      "batch_size": 8,
+      "versions": {
+        "python": "3.13.15",
+        "torch": "2.11.0+cu128",
+        "transformers": "5.20.0",
+        "accelerate": "1.15.0",
+        "numpy": "2.1.3",
+        "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+        "kaggle": true,
+        "huggingface_hub": "1.33.0",
+        "tokenizers": "0.23.1",
+        "safetensors": "0.8.0",
+        "scipy": "1.16.3",
+        "pandas": "2.3.3",
+        "matplotlib": "3.10.0",
+        "gpu": "Tesla T4",
+        "cuda": "12.8"
+      },
+      "written_utc": "2026-10-16T07:31:40.021789+00:00"
+    },
+    {
+      "run_id": "f1b2aa18ff",
+      "script": "step3_hallucination.py",
+      "argv": [
+        "--out",
+        "/kaggle/working/results",
+        "--model",
+        "llama",
+        "qwen",
+        "--batch-size",
+        "8"
+      ],
+      "conditions": [
+        "misleading"
+      ],
+      "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "dtype": "float16",
+      "quantization": null,
+      "batch_size": 8,
+      "versions": {
+        "python": "3.13.15",
+        "torch": "2.11.0+cu128",
+        "transformers": "5.20.0",
+        "accelerate": "1.15.0",
+        "numpy": "2.1.3",
+        "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+        "kaggle": true,
+        "huggingface_hub": "1.33.0",
+        "tokenizers": "0.23.1",
+        "safetensors": "0.8.0",
+        "scipy": "1.16.3",
+        "pandas": "2.3.3",
+        "matplotlib": "3.10.0",
+        "gpu": "Tesla T4",
+        "cuda": "12.8"
+      },
+      "written_utc": "2026-10-16T07:42:03.323310+00:00"
+    },
+    {
+      "run_id": "d54ef21c91",
+      "script": "step4_interpretability.py",
+      "argv": [
+        "--out",
+        "/kaggle/working/results",
+        "--model",
+        "llama",
+        "qwen",
+        "--batch-size",
+        "8"
+      ],
+      "conditions": [
+        "interp"
+      ],
+      "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "dtype": "float16",
+      "quantization": null,
+      "batch_size": 8,
+      "versions": {
+        "python": "3.13.15",
+        "torch": "2.11.0+cu128",
+        "transformers": "5.20.0",
+        "accelerate": "1.15.0",
+        "numpy": "2.1.3",
+        "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+        "kaggle": true,
+        "huggingface_hub": "1.33.0",
+        "tokenizers": "0.23.1",
+        "safetensors": "0.8.0",
+        "scipy": "1.16.3",
+        "pandas": "2.3.3",
+        "matplotlib": "3.10.0",
+        "gpu": "Tesla T4",
+        "cuda": "12.8"
+      },
+      "written_utc": "2026-10-16T07:45:34.871518+00:00"
+    },
+    {
+      "run_id": "6a62693428",
+      "script": "step5_fairness.py",
+      "argv": [
+        "--out",
+        "/kaggle/working/results",
+        "--model",
+        "llama",
+        "qwen",
+        "--batch-size",
+        "8"
+      ],
+      "conditions": [
+        "fair_race_black",
+        "fair_race_white",
+        "fair_ins_uninsured",
+        "fair_ins_private",
+        "fair_res_rural",
+        "fair_res_urban"
+      ],
+      "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "dtype": "float16",
+      "quantization": null,
+      "batch_size": 8,
+      "versions": {
+        "python": "3.13.15",
+        "torch": "2.11.0+cu128",
+        "transformers": "5.20.0",
+        "accelerate": "1.15.0",
+        "numpy": "2.1.3",
+        "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+        "kaggle": true,
+        "huggingface_hub": "1.33.0",
+        "tokenizers": "0.23.1",
+        "safetensors": "0.8.0",
+        "scipy": "1.16.3",
+        "pandas": "2.3.3",
+        "matplotlib": "3.10.0",
+        "gpu": "Tesla T4",
+        "cuda": "12.8"
+      },
+      "written_utc": "2026-10-16T07:52:45.065020+00:00"
+    },
+    {
+      "run_id": "7cbfceda87",
+      "script": "step6_security.py",
+      "argv": [
+        "--out",
+        "/kaggle/working/results",
+        "--model",
+        "llama",
+        "qwen",
+        "--batch-size",
+        "8"
+      ],
+      "conditions": [
+        "injection",
+        "canary"
+      ],
+      "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "dtype": "float16",
+      "quantization": null,
+      "batch_size": 8,
+      "versions": {
+        "python": "3.13.15",
+        "torch": "2.11.0+cu128",
+        "transformers": "5.20.0",
+        "accelerate": "1.15.0",
+        "numpy": "2.1.3",
+        "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+        "kaggle": true,
+        "huggingface_hub": "1.33.0",
+        "tokenizers": "0.23.1",
+        "safetensors": "0.8.0",
+        "scipy": "1.16.3",
+        "pandas": "2.3.3",
+        "matplotlib": "3.10.0",
+        "gpu": "Tesla T4",
+        "cuda": "12.8"
+      },
+      "written_utc": "2026-10-16T08:09:57.145948+00:00"
+    },
+    {
+      "run_id": "0065dae80b",
+      "script": "step8_intervention.py",
+      "argv": [
+        "--out",
+        "/kaggle/working/results",
+        "--model",
+        "llama",
+        "qwen",
+        "--batch-size",
+        "8"
+      ],
+      "conditions": [
+        "hardened_clean",
+        "hardened_misleading",
+        "hardened_injection",
+        "hardened_canary"
+      ],
+      "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "dtype": "float16",
+      "quantization": null,
+      "batch_size": 8,
+      "versions": {
+        "python": "3.13.15",
+        "torch": "2.11.0+cu128",
+        "transformers": "5.20.0",
+        "accelerate": "1.15.0",
+        "numpy": "2.1.3",
+        "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+        "kaggle": true,
+        "huggingface_hub": "1.33.0",
+        "tokenizers": "0.23.1",
+        "safetensors": "0.8.0",
+        "scipy": "1.16.3",
+        "pandas": "2.3.3",
+        "matplotlib": "3.10.0",
+        "gpu": "Tesla T4",
+        "cuda": "12.8"
+      },
+      "written_utc": "2026-10-16T08:17:01.939417+00:00"
+    },
+    {
+      "run_id": "780c75541a",
+      "script": "extra_reasoning.py",
+      "argv": [
+        "--out",
+        "/kaggle/working/results",
+        "--model",
+        "llama",
+        "qwen",
+        "--batch-size",
+        "8"
+      ],
+      "conditions": [
+        "reason_clean",
+        "reason_misleading"
+      ],
+      "model_revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "dtype": "float16",
+      "quantization": null,
+      "batch_size": 8,
+      "versions": {
+        "python": "3.13.15",
+        "torch": "2.11.0+cu128",
+        "transformers": "5.20.0",
+        "accelerate": "1.15.0",
+        "numpy": "2.1.3",
+        "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+        "kaggle": true,
+        "huggingface_hub": "1.33.0",
+        "tokenizers": "0.23.1",
+        "safetensors": "0.8.0",
+        "scipy": "1.16.3",
+        "pandas": "2.3.3",
+        "matplotlib": "3.10.0",
+        "gpu": "Tesla T4",
+        "cuda": "12.8"
+      },
+      "written_utc": "2026-10-16T08:32:20.188707+00:00"
+    }
+  ]
+}

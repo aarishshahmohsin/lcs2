@@ -1,0 +1,5 @@
+
+===== 2026-10-16T07:30:40.069983+00:00 /usr/bin/python3 -u /kaggle/working/repo/selftest.py
+SELFTEST PASSED — synthetic outputs analysed in /tmp/lcs2_selftest_7u2f3ass
+figures: ['A_baseline_reliability.png', 'B1_misleading.png', 'B2_logit_lens.png', 'B3_fairness.png', 'B4_security.png', 'C_cross.png', 'D_intervention.png', 'X_reasoning.png']
+===== exit 0 after 0.1 min

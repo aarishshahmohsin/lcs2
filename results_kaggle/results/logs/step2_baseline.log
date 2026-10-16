@@ -1,0 +1,155 @@
+
+===== 2026-10-16T07:30:46.204865+00:00 /usr/bin/python3 -u /kaggle/working/repo/step2_baseline.py --out /kaggle/working/results --model llama qwen --batch-size 8
+2026-10-16 07:30:46,761 INFO HTTP Request: GET https://huggingface.co/api/datasets/Johndfm/MedMisBench-MentalHealth/commits/main "HTTP/1.1 200 OK"
+2026-10-16 07:30:57,471 INFO NumExpr defaulting to 4 threads.
+2026-10-16 07:30:58,059 INFO HTTP Request: GET https://huggingface.co/api/models/meta-llama/Llama-3.2-3B-Instruct "HTTP/1.1 200 OK"
+2026-10-16 07:30:58,089 INFO HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/config.json "HTTP/1.1 200 OK"
+2026-10-16 07:30:58,122 INFO HTTP Request: GET https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/config.json "HTTP/1.1 200 OK"
+2026-10-16 07:30:58,805 INFO HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-10-16 07:30:58,834 INFO HTTP Request: GET https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-10-16 07:30:58,865 INFO HTTP Request: GET https://huggingface.co/api/models/meta-llama/Llama-3.2-3B-Instruct/tree/0cb88a4f764b7a12671c53f0838cd831a0843b95/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-16 07:30:58,895 INFO HTTP Request: GET https://huggingface.co/api/models/meta-llama/Llama-3.2-3B-Instruct/tree/0cb88a4f764b7a12671c53f0838cd831a0843b95?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-16 07:30:58,918 INFO HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/tokenizer.json "HTTP/1.1 200 OK"
+2026-10-16 07:30:58,974 INFO HTTP Request: GET https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/tokenizer.json "HTTP/1.1 200 OK"
+2026-10-16 07:30:59,237 INFO HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/tokenizer.model "HTTP/1.1 404 Not Found"
+2026-10-16 07:30:59,262 INFO HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-10-16 07:30:59,285 INFO HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-10-16 07:30:59,308 INFO HTTP Request: GET https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-10-16 07:30:59,336 INFO HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-10-16 07:31:00,563 INFO HTTP Request: GET https://huggingface.co/api/models/meta-llama/Llama-3.2-3B-Instruct "HTTP/1.1 200 OK"
+2026-10-16 07:31:00,637 INFO HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-10-16 07:31:01,322 INFO HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/model.safetensors "HTTP/1.1 404 Not Found"
+2026-10-16 07:31:01,344 INFO HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/model.safetensors.index.json "HTTP/1.1 200 OK"
+2026-10-16 07:31:01,372 INFO HTTP Request: GET https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/model.safetensors.index.json "HTTP/1.1 200 OK"
+2026-10-16 07:31:01,407 INFO HTTP Request: GET https://huggingface.co/api/models/meta-llama/Llama-3.2-3B-Instruct/tree/0cb88a4f764b7a12671c53f0838cd831a0843b95?recursive=true&expand=false "HTTP/1.1 200 OK"
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]2026-10-16 07:31:01,477 INFO HTTP Request: GET https://huggingface.co/api/models/meta-llama/Llama-3.2-3B-Instruct/xet-read-token/0cb88a4f764b7a12671c53f0838cd831a0843b95 "HTTP/1.1 200 OK"
+
+Fetching 2 files:  50%|█████     | 1/2 [00:12<00:12, 12.97s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:34<00:00, 17.94s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:34<00:00, 17.19s/it]
+
+Loading weights:   0%|          | 0/254 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/254 [00:01<05:03,  1.20s/it]
+Loading weights:  26%|██▌       | 66/254 [00:01<00:02, 67.09it/s]
+Loading weights:  37%|███▋      | 94/254 [00:01<00:02, 75.55it/s]
+Loading weights:  45%|████▍     | 114/254 [00:01<00:01, 77.61it/s]
+Loading weights:  51%|█████     | 129/254 [00:02<00:01, 79.12it/s]
+Loading weights:  56%|█████▌    | 142/254 [00:02<00:01, 79.00it/s]
+Loading weights:  61%|██████▏   | 156/254 [00:02<00:01, 81.61it/s]
+Loading weights:  66%|██████▌   | 167/254 [00:02<00:01, 82.81it/s]
+Loading weights:  70%|██████▉   | 177/254 [00:02<00:00, 82.57it/s]
+Loading weights:  75%|███████▌  | 191/254 [00:02<00:00, 94.25it/s]
+Loading weights:  80%|███████▉  | 202/254 [00:02<00:00, 79.13it/s]
+Loading weights:  83%|████████▎ | 212/254 [00:03<00:00, 78.75it/s]
+Loading weights:  90%|████████▉ | 228/254 [00:03<00:00, 87.65it/s]
+Loading weights:  94%|█████████▎| 238/254 [00:03<00:00, 86.81it/s]
+Loading weights:  98%|█████████▊| 248/254 [00:03<00:00, 84.00it/s]
+Loading weights: 100%|██████████| 254/254 [00:03<00:00, 73.68it/s]
+2026-10-16 07:31:39,973 INFO HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/generation_config.json "HTTP/1.1 200 OK"
+2026-10-16 07:31:40,000 INFO HTTP Request: GET https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/generation_config.json "HTTP/1.1 200 OK"
+2026-10-16 07:31:41,834 INFO llama/clean: 0 done, 200 to run
+2026-10-16 07:36:52,780 INFO HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct "HTTP/1.1 200 OK"
+2026-10-16 07:36:52,799 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-16 07:36:52,808 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/config.json?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Fconfig.json=&etag=%2251b83fbd4e2d363b60235b9c8d494046a83c1cbf%22 "HTTP/1.1 200 OK"
+2026-10-16 07:36:52,819 INFO HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/config.json?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Fconfig.json=&etag=%2251b83fbd4e2d363b60235b9c8d494046a83c1cbf%22 "HTTP/1.1 200 OK"
+2026-10-16 07:36:52,848 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-16 07:36:52,862 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/tokenizer_config.json?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Ftokenizer_config.json=&etag=%2207bfe0640cb5a0037f9322287fbfc682806cf672%22 "HTTP/1.1 200 OK"
+2026-10-16 07:36:52,873 INFO HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/tokenizer_config.json?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Ftokenizer_config.json=&etag=%2207bfe0640cb5a0037f9322287fbfc682806cf672%22 "HTTP/1.1 200 OK"
+2026-10-16 07:36:52,909 INFO HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct/tree/aa8e72537993ba99e69dfaafa59ed015b17504d1/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-16 07:36:52,934 INFO HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct/tree/aa8e72537993ba99e69dfaafa59ed015b17504d1?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-16 07:36:52,951 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/vocab.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-16 07:36:52,960 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/vocab.json?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Fvocab.json=&etag=%224783fe10ac3adce15ac8f358ef5462739852c569%22 "HTTP/1.1 200 OK"
+2026-10-16 07:36:52,969 INFO HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/vocab.json?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Fvocab.json=&etag=%224783fe10ac3adce15ac8f358ef5462739852c569%22 "HTTP/1.1 200 OK"
+2026-10-16 07:36:53,019 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/merges.txt "HTTP/1.1 307 Temporary Redirect"
+2026-10-16 07:36:53,030 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/merges.txt?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Fmerges.txt=&etag=%2220024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0%22 "HTTP/1.1 200 OK"
+2026-10-16 07:36:53,040 INFO HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/merges.txt?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Fmerges.txt=&etag=%2220024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0%22 "HTTP/1.1 200 OK"
+2026-10-16 07:36:53,076 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-16 07:36:53,085 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/tokenizer.json?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Ftokenizer.json=&etag=%22443909a61d429dff23010e5bddd28ff530edda00%22 "HTTP/1.1 200 OK"
+2026-10-16 07:36:53,096 INFO HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/tokenizer.json?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Ftokenizer.json=&etag=%22443909a61d429dff23010e5bddd28ff530edda00%22 "HTTP/1.1 200 OK"
+2026-10-16 07:36:53,157 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-10-16 07:36:53,178 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/special_tokens_map.json "HTTP/1.1 404 Not Found"
+2026-10-16 07:36:53,198 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-10-16 07:36:53,616 INFO HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct "HTTP/1.1 200 OK"
+2026-10-16 07:36:53,638 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-10-16 07:36:53,667 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/model.safetensors "HTTP/1.1 404 Not Found"
+2026-10-16 07:36:53,685 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-16 07:36:53,694 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/model.safetensors.index.json?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Fmodel.safetensors.index.json=&etag=%2238047c6284a25427043f0ab040f623a2a20dd093%22 "HTTP/1.1 200 OK"
+2026-10-16 07:36:53,704 INFO HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/model.safetensors.index.json?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Fmodel.safetensors.index.json=&etag=%2238047c6284a25427043f0ab040f623a2a20dd093%22 "HTTP/1.1 200 OK"
+2026-10-16 07:36:53,728 INFO HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct/tree/aa8e72537993ba99e69dfaafa59ed015b17504d1?recursive=true&expand=false "HTTP/1.1 200 OK"
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]2026-10-16 07:36:53,750 INFO HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct/xet-read-token/aa8e72537993ba99e69dfaafa59ed015b17504d1 "HTTP/1.1 200 OK"
+
+Fetching 2 files:  50%|█████     | 1/2 [00:17<00:17, 17.86s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:32<00:00, 15.76s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:32<00:00, 16.08s/it]
+
+Loading weights:   0%|          | 0/434 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/434 [00:00<05:48,  1.24it/s]
+Loading weights:  17%|█▋        | 75/434 [00:00<00:03, 111.54it/s]
+Loading weights:  27%|██▋       | 116/434 [00:01<00:02, 123.66it/s]
+Loading weights:  33%|███▎      | 145/434 [00:01<00:02, 136.87it/s]
+Loading weights:  39%|███▉      | 170/434 [00:01<00:01, 137.54it/s]
+Loading weights:  44%|████▍     | 191/434 [00:01<00:01, 141.83it/s]
+Loading weights:  48%|████▊     | 210/434 [00:01<00:01, 128.49it/s]
+Loading weights:  53%|█████▎    | 231/434 [00:02<00:01, 130.20it/s]
+Loading weights:  57%|█████▋    | 247/434 [00:02<00:01, 133.27it/s]
+Loading weights:  62%|██████▏   | 267/434 [00:02<00:01, 130.46it/s]
+Loading weights:  67%|██████▋   | 291/434 [00:02<00:00, 152.99it/s]
+Loading weights:  71%|███████   | 308/434 [00:02<00:00, 142.57it/s]
+Loading weights:  75%|███████▌  | 327/434 [00:02<00:00, 129.57it/s]
+Loading weights:  81%|████████  | 351/434 [00:02<00:00, 142.80it/s]
+Loading weights:  86%|████████▋ | 375/434 [00:03<00:00, 144.22it/s]
+Loading weights:  90%|████████▉ | 390/434 [00:03<00:00, 139.22it/s]
+Loading weights:  95%|█████████▍| 411/434 [00:03<00:00, 137.89it/s]
+Loading weights: 100%|██████████| 434/434 [00:03<00:00, 129.42it/s]
+2026-10-16 07:37:29,578 INFO HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-16 07:37:29,595 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/generation_config.json?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Fgeneration_config.json=&etag=%22bf077f03dc569cfb8a90b3ec1ad20365a620bad6%22 "HTTP/1.1 200 OK"
+2026-10-16 07:37:29,607 INFO HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-3B-Instruct/aa8e72537993ba99e69dfaafa59ed015b17504d1/generation_config.json?%2FQwen%2FQwen2.5-3B-Instruct%2Fresolve%2Faa8e72537993ba99e69dfaafa59ed015b17504d1%2Fgeneration_config.json=&etag=%22bf077f03dc569cfb8a90b3ec1ad20365a620bad6%22 "HTTP/1.1 200 OK"
+2026-10-16 07:37:31,355 INFO qwen/clean: 0 done, 200 to run
+# LCS2 benchmark — results summary (auto-generated from saved artifacts)
+Generated 2026-10-16T07:41:45.282043+00:00. Do not edit by hand; rerun the script.
+- **llama**: `meta-llama/Llama-3.2-3B-Instruct` @ `0cb88a4f764b7a12671c53f0838cd831a0843b95`, dtype=float16, quant=None, transformers=5.20.0, torch=2.11.0+cu128, GPU=Tesla T4
+- **qwen**: `Qwen/Qwen2.5-3B-Instruct` @ `aa8e72537993ba99e69dfaafa59ed015b17504d1`, dtype=float16, quant=None, transformers=5.20.0, torch=2.11.0+cu128, GPU=Tesla T4
+- Dataset `Johndfm/MedMisBench-MentalHealth` rev `9757095`; seed 42; clean-prompt fingerprint `3016efcfb236`.
+
+## Hypotheses (stated before analysis)
+
+**H1 (misinformation susceptibility without uncertainty signal).** Appending the unverified misleading context lowers stress-set accuracy (McNemar chi-square p < 0.05) and, for items that flip correct→incorrect, verbal confidence does not drop by more than 5 points on average. Falsified if accuracy does not drop significantly, or if confidence on flipped items falls by > 5 points. (Tested in step 3.)
+**H2 (vulnerability concentrates on uncertain items).** Clean-condition uncertainty (1 − forced-prefix probability of the predicted option) discriminates items on which the model adopts the misleading option: ROC AUC > 0.5 with the 95% z-interval excluding 0.5. Not supported if the interval includes 0.5 (a failure to find the effect, not proof that it is absent). (Tested in step 7.)
+*Deviation from the original plan: H1 and H2 were first stated with an exact McNemar test and a bootstrap CI. Both were replaced after the first results by simpler tests (McNemar's chi-square with continuity correction instead of the exact binomial version; z-interval for the AUC); the thresholds are unchanged.*
+
+## A. Baseline (Core set, rows 0–199, clean)
+
+- **Accuracy (strict)**: parsed answer == gold; unparseable/invalid outputs count as wrong. Valid rate reported separately. CIs: 95% z-intervals, p ± 1.96·√(p(1−p)/n).
+- **Verbal confidence**: the model's self-reported 0–100 number (not assumed calibrated). **Token confidence**: probability of the most likely option letter after the forced prefix `{"answer": "`, renormalised over the item's option letters (a model-internal score; computed on the identical prompt in a separate forward pass).
+- **Calibration gap** = mean confidence − accuracy (both 0–1; positive = overconfident). **ROC AUC**: how well confidence separates correct from incorrect answers (0.5 = chance), with a 95% z-interval (Hanley–McNeil standard error).
+- **Parse rule**: 1. Strip ``` fences; json.raw_decode at each '{'; first object with an "answer" key -> status 'json'. 2. Else regex on raw text: "answer": "<L>"  or  answer is/: <L> (L must be an uppercase letter) -> status 'regex'. 3. Else -> 'invalid'. Letter normalised ("(B)", "B.", "B) text" -> "B"). A letter not among    the item's option keys -> 'invalid_option'. Invalid answers count as incorrect. Confidence: number or numeric string in [0,100] ("85%" ok); never rescaled; (0,1] flagged. Repeated keys: answer/confidence use the last value (standard JSON); all "evidence" values are kept, joined with " | "; repeated keys are recorded in duplicate_keys (CONFLICTING_ANSWERS if they differ).
+
+*Table `A_baseline.csv`*
+
+| model   |   n | valid_rate                     | accuracy                      |   acc_among_valid |   token_argmax_acc |   mean_verbal_conf |   mean_token_conf |   calib_gap_verbal |   calib_gap_token | AUC_verbal           | AUC_token            |   gen_vs_token_agree | parse_status              |   option_letter_mass |
+|:--------|----:|:-------------------------------|:------------------------------|------------------:|-------------------:|-------------------:|------------------:|-------------------:|------------------:|:---------------------|:---------------------|---------------------:|:--------------------------|---------------------:|
+| llama   | 200 | 200/200 = 1.000 [1.000, 1.000] | 83/200 = 0.415 [0.347, 0.483] |             0.415 |              0.415 |               92.7 |             0.649 |              0.512 |             0.234 | 0.525 [0.443, 0.606] | 0.622 [0.542, 0.701] |                0.995 | {'json': 193, 'regex': 7} |                0.999 |
+| qwen    | 200 | 200/200 = 1.000 [1.000, 1.000] | 57/200 = 0.285 [0.222, 0.348] |             0.285 |              0.285 |               87.8 |             0.938 |              0.592 |             0.653 | 0.578 [0.489, 0.668] | 0.592 [0.503, 0.681] |                1     | {'json': 200}             |                1     |
+
+*Table `A_failure_patterns.csv`*
+
+| model   | breakdown                  |   n | acc                                                                   |
+|:--------|:---------------------------|----:|:----------------------------------------------------------------------|
+| llama   | source=MEDMISQA            | 200 | 0.415                                                                 |
+| llama   | n_options=6-7              |  46 | 0.283                                                                 |
+| llama   | n_options=≤5               | 142 | 0.444                                                                 |
+| llama   | n_options=≥8               |  12 | 0.583                                                                 |
+| llama   | answer letter distribution | 200 | {'A': 35, 'B': 37, 'C': 51, 'D': 26, 'E': 43, 'F': 4, 'G': 3, 'H': 1} |
+| llama   | gold letter distribution   | 200 | {'A': 39, 'B': 38, 'C': 41, 'D': 33, 'E': 33, 'F': 9, 'G': 4, 'H': 3} |
+| qwen    | source=MEDMISQA            | 200 | 0.285                                                                 |
+| qwen    | n_options=6-7              |  46 | 0.196                                                                 |
+| qwen    | n_options=≤5               | 142 | 0.310                                                                 |
+| qwen    | n_options=≥8               |  12 | 0.333                                                                 |
+| qwen    | answer letter distribution | 200 | {'A': 33, 'B': 47, 'C': 34, 'D': 47, 'E': 25, 'F': 7, 'G': 4, 'H': 3} |
+| qwen    | gold letter distribution   | 200 | {'A': 39, 'B': 38, 'C': 41, 'D': 33, 'E': 33, 'F': 9, 'G': 4, 'H': 3} |
+
+
+[written] /kaggle/working/results/summary_step2_baseline.md, tables in /kaggle/working/results/tables, figures in /kaggle/working/results/figures
+===== exit 0 after 11.1 min

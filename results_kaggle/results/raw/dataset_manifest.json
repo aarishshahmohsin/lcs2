@@ -1,0 +1,25 @@
+{
+  "repo_id": "Johndfm/MedMisBench-MentalHealth",
+  "revision": "9757095",
+  "filename": "medmisbench_mentalhealth.jsonl",
+  "split": "train",
+  "expected_rows": 449,
+  "resolved_revision": "9757095598b6555c3e935679fdb7384aed4eb651",
+  "n_rows": 449,
+  "subsets": {
+    "core": [
+      0,
+      199
+    ],
+    "stress": [
+      0,
+      59
+    ],
+    "interp": [
+      0,
+      39
+    ]
+  },
+  "sha256_file": "0c7db2295ca5bf220933bc95d8f613c11e3f8c0d3d5f0235dbf56595d5434c21",
+  "issues": []
+}

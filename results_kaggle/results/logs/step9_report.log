@@ -1,0 +1,6 @@
+
+===== 2026-10-16T08:58:45.396908+00:00 /usr/bin/python3 -u /kaggle/working/repo/step9_report.py --out /kaggle/working/results
+2026-10-16 08:58:45,760 INFO NumExpr defaulting to 4 threads.
+2026-10-16 08:58:52,900 INFO wrote /kaggle/working/results/summary.md (216 lines)
+[written] /kaggle/working/results/summary.md  (tables in /kaggle/working/results/tables, case studies in /kaggle/working/results/tables/case_studies.md)
+===== exit 0 after 0.1 min

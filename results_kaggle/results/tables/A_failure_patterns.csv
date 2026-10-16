@@ -1,0 +1,13 @@
+model,breakdown,n,acc
+llama,source=MEDMISQA,200,0.415
+llama,n_options=6-7,46,0.283
+llama,n_options=≤5,142,0.444
+llama,n_options=≥8,12,0.583
+llama,answer letter distribution,200,"{'A': 35, 'B': 37, 'C': 51, 'D': 26, 'E': 43, 'F': 4, 'G': 3, 'H': 1}"
+llama,gold letter distribution,200,"{'A': 39, 'B': 38, 'C': 41, 'D': 33, 'E': 33, 'F': 9, 'G': 4, 'H': 3}"
+qwen,source=MEDMISQA,200,0.285
+qwen,n_options=6-7,46,0.196
+qwen,n_options=≤5,142,0.310
+qwen,n_options=≥8,12,0.333
+qwen,answer letter distribution,200,"{'A': 33, 'B': 47, 'C': 34, 'D': 47, 'E': 25, 'F': 7, 'G': 4, 'H': 3}"
+qwen,gold letter distribution,200,"{'A': 39, 'B': 38, 'C': 41, 'D': 33, 'E': 33, 'F': 9, 'G': 4, 'H': 3}"
